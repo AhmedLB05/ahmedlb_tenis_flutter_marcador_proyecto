@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 List<Jugador> jugadorListFromJson(String str) => List<Jugador>.from(
-  json.decode(str)["data"].map((x) => Jugador.fromJson(x)),
+  json.decode(str)["jugadores"].map((x) => Jugador.fromJson(x)),
 );
 
 String jugadorToJson(Jugador data) => json.encode(data.toJson());

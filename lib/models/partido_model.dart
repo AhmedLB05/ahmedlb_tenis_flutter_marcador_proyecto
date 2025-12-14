@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:ahmedlb_tenis_flutter_marcador_proyecto/models/jugador_model.dart';
 
 List<Partido> partidoListFromJson(String str) => List<Partido>.from(
-  json.decode(str)["data"].map((x) => Partido.fromJson(x)),
+  json.decode(str)["partidos"].map((x) => Partido.fromJson(x)),
 );
 
 String partidoToJson(Partido data) => json.encode(data.toJson());
